@@ -2,10 +2,10 @@
 
 public class ProgramForma {
     public static void main(String[] args) {
-        FormaGeometrica formaGeometrica = new FormaGeometrica();
+        FormaGeometricaForma formaGeometricaForma = new FormaGeometricaForma();
 
         try {
-            System.out.printf("Area: %d", formaGeometrica.area());
+            System.out.printf("Area: %d", formaGeometricaForma.area());
         } catch (Exception e) {
             System.out.println(e);
         }
