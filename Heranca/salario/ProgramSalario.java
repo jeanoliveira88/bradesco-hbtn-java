@@ -1,7 +1,7 @@
 
 import java.util.Locale;
 
-public class Program {
+public class ProgramSalario {
         public static void main(String[] args) {
                 Departamento departamentoEngenharia = new Departamento(1000, 1100);
 

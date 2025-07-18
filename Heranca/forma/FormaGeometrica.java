@@ -1,4 +1,4 @@
-package forma;
+
 
 public class FormaGeometrica {
 
