@@ -1,12 +1,12 @@
 
 
-public class Program {
+public class ProgramRetangulo {
     public static void main(String[] args) {
-        Retangulo retangulo = new Retangulo();
+        Retangulo2 retangulo = new Retangulo2();
         retangulo.setLargura(10);
         retangulo.setAltura(2);
 
-        if (FormaGeometrica.class.isAssignableFrom(Retangulo.class))
+        if (FormaGeometricaRetangulo.class.isAssignableFrom(Retangulo2.class))
             System.out.println("Retangulo eh uma subclasse de FormaGeometrica");
         else
             System.out.println("Retangulo nao eh uma subclasse de FormaGeometrica");

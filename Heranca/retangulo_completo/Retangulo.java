@@ -23,4 +23,16 @@ public class Retangulo extends FormaGeometrica {
         }
         this.altura = altura;
     }
+
+    @Override
+    public double area(){
+        double area = largura * altura;
+        return area;
+    }
+
+    @Override
+    public String toString() {
+        String resultado = String.format("[Retangulo] %.2f / %.2f", largura, altura);
+        return resultado;
+    }
 }
