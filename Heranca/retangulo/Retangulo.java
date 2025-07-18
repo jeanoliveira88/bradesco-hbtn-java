@@ -1,4 +1,4 @@
-public class Retangulo extends FormaGeometricaForma {
+public class Retangulo extends FormaGeometrica {
     private double largura;
     private double altura;
 
