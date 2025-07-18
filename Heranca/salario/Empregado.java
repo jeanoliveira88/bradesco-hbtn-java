@@ -1,7 +1,7 @@
 package Heranca.salario;
 
 public class Empregado {
-    private double salarioFixo;
+    public double salarioFixo;
 
     public Empregado(double salarioFixo) {
         this.salarioFixo = salarioFixo;
@@ -12,10 +12,13 @@ public class Empregado {
     }
 
     public double calcularBonus(Departamento departamento) {
+        if (departamento.alcancouMeta()) {
+            return salarioFixo * 0.10;
+        }
         return 0;
     }
 
     public double calcularSalarioTotal(Departamento departamento) {
-        return 0;
+        return salarioFixo + calcularBonus(departamento);
     }
 }

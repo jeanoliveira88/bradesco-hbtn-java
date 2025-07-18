@@ -18,6 +18,6 @@ public class Departamento {
     }
 
     public boolean alcancouMeta() {
-        return false;
+        return valorAtingidoMeta >= valorMeta;
     }
 }

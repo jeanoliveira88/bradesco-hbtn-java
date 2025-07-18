@@ -8,7 +8,11 @@ public class Gerente extends Empregado {
 
     @Override
     public double calcularBonus(Departamento departamento) {
-        // TODO Auto-generated method stub
-        return super.calcularBonus(departamento);
+        if (departamento.alcancouMeta()) {
+            double diferenca = departamento.getValorAtingidoMeta() - departamento.getValorMeta();
+            double bonusExtra = diferenca > 0 ? diferenca * 0.01 : 0.0;
+            return this.salarioFixo * 0.20 + bonusExtra;
+        }
+        return 0;
     }
 }
