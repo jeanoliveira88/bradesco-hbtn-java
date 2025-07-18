@@ -1,6 +1,6 @@
-public class Retangulo2 extends FormaGeometricaRetangulo {
-    private double largura;
-    private double altura;
+public class Retangulo extends FormaGeometrica {
+    protected double largura;
+    protected double altura;
 
     public double getLargura() {
         return largura;
@@ -22,5 +22,17 @@ public class Retangulo2 extends FormaGeometricaRetangulo {
             throw  new IllegalArgumentException("Altura deve ser maior ou igual a 0");
         }
         this.altura = altura;
+    }
+
+    @Override
+    public double area(){
+        double area = largura * altura;
+        return area;
+    }
+
+    @Override
+    public String toString() {
+        String resultado = String.format("[Retangulo] %.2f / %.2f", largura, altura);
+        return resultado;
     }
 }
