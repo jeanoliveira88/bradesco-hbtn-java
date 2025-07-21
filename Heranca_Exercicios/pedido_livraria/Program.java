@@ -29,7 +29,7 @@ public class Program {
 
         Pedido pedido3 = new Pedido(5, itensPedido3);
 
-        System.out.printf("Total Pedido : %.2f\n", pedido3.calcularTotal());
+        System.out.printf("Total Pedido: %.2f\n", pedido3.calcularTotal());
 
         // Pedido 4
         ItemPedido[] itensPedido4 = new ItemPedido[] {
