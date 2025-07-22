@@ -1,0 +1,35 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+
+# Arquivos de build
+/out/
+/build/
+target/
+
+# Logs e temporários
+*.log
+*.tmp
+
+# Arquivos gerados pelo sistema
+.DS_Store
+Thumbs.db
+
+# Dependências de IDE específicas
+.idea/
+*.ipr
+*.iws
+
+# Arquivos de configuração locais
+*.env
+local.properties
+
+# Arquivos de cache
+.cache/
+
+# Outros exemplos úteis
+*.class
+*.jar
+*.war
+*.ear
