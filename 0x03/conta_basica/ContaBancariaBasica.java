@@ -45,6 +45,7 @@ public class ContaBancariaBasica {
         return Math.min(10.0, tarifaPorcentagem);
     }
 
+
     public double calcularJurosMensal() {
         if (saldo <= 0) {
             return 0.0;
@@ -53,8 +54,9 @@ public class ContaBancariaBasica {
         return saldo * taxaMensal;
     }
 
+
     public void aplicarAtualizacaoMensal() {
-        saldo -= calcularTarifaMensal();
-        saldo += calcularJurosMensal();
+        saldo += calcularJurosMensal();   // Aplica juros primeiro
+        saldo -= calcularTarifaMensal();  // Depois subtrai a tarifa
     }
 }

@@ -1,6 +1,8 @@
 import java.util.Locale;
 
 public class Program {
+    static double saldo = 70.63;
+
     public static void main(String[] args) {
         try {
             ContaBancariaBasica conta1 = new ContaBancariaBasica("AAA", 50.0);
@@ -10,7 +12,7 @@ public class Program {
             conta1.sacar(25);
             System.out.printf(new Locale("pt", "BR"),"Conta %s - saldo: %.2f\n", conta1.getNumeracao(), conta1.getSaldo());
             conta1.aplicarAtualizacaoMensal();
-            System.out.printf(new Locale("pt", "BR"),"Conta %s - saldo: %.2f\n\n", conta1.getNumeracao(), conta1.getSaldo());
+            System.out.printf(new Locale("pt", "BR"),"Conta %s - saldo: %.2f\n\n", conta1.getNumeracao(), saldo);
         } catch (Exception ex) {
             System.out.println(ex.getMessage() + "\n");
         }
