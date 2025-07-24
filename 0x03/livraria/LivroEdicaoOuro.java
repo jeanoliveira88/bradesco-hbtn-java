@@ -2,7 +2,7 @@
 public class LivroEdicaoOuro extends Livro {
 
     public LivroEdicaoOuro(String titulo, String autor, double preco)
-            throws livraria.exceptions.AutorInvalidoException, livraria.exceptions.LivroInvalidoException {
+            throws exceptions.AutorInvalidoException, exceptions.LivroInvalidoException {
         super(titulo, autor, preco);
     }
 
