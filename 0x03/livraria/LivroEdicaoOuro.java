@@ -3,7 +3,7 @@ package livraria;
 public class LivroEdicaoOuro extends Livro {
 
     public LivroEdicaoOuro(String titulo, String autor, double preco)
-            throws exceptions.AutorInvalidoException, exceptions.LivroInvalidoException {
+            throws livraria.exceptions.AutorInvalidoException, livraria.exceptions.LivroInvalidoException {
         super(titulo, autor, preco);
     }
 
