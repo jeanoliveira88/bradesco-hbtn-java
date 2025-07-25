@@ -22,7 +22,7 @@ public class GerenciamentoDeContatos {
                 System.out.println("Email duplicado para o contato " + nome + "!");
             }
         } else {
-            System.out.println("Erro: Contato com " + nome + " já existe!");
+            System.out.println("Erro: Contato com nome" + nome + " já existe!");
         }
     }
 
