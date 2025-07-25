@@ -22,7 +22,7 @@ public class GerenciamentoDeContatos {
                 System.out.println("Email duplicado para o contato " + nome + "!");
             }
         } else {
-            System.out.println("Contato " + nome + " já existe!");
+            System.out.println("Erro: Contato com " + nome + " já existe!");
         }
     }
 
@@ -36,7 +36,7 @@ public class GerenciamentoDeContatos {
         for (Map.Entry<String, Contato> entry : contatos.entrySet()) {
             System.out.println("Nome: " + entry.getKey());
             entry.getValue().exibirContato();
-            System.out.println("-------------------------");
+            System.out.println("-------------------------------");
         }
     }
 
