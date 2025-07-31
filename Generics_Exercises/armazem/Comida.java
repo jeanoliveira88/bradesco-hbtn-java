@@ -1,6 +1,6 @@
 public class Comida {
     private String nome;
-    private int calorias;
+    private double calorias;
     private double preco;
 
     public Comida(String nome, int calorias, double preco) {
@@ -11,11 +11,11 @@ public class Comida {
 
     @Override
     public String toString() {
-        return "[" + nome + "] " + calorias + " R$ " + String.format("%.2f", preco);
+        return "[" + nome + "] " +  String.format("%.6f", calorias) + " R$ " + String.format("%.6f", preco);
     }
 
     // Getters (opcional, se quiser acessar os atributos fora da classe)
     public String getNome() { return nome; }
-    public int getCalorias() { return calorias; }
+    public double getCalorias() { return calorias; }
     public double getPreco() { return preco; }
 }
