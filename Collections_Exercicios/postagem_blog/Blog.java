@@ -54,7 +54,7 @@ public class Blog {
     public Map<Categorias, Set<Post>> obterTodosPostsPorCategorias() {
         Map<Categorias, Set<Post>> mapa = new LinkedHashMap<>();
         for (Post p : postagens) {
-            mapa.computeIfAbsent(p.getCategoria(), k -> new LinkedHashSet<>()).add(p);
+            mapa.computeIfAbsent(p.getCategoria(), k -> new TreeSet<>()).add(p);
         }
         return mapa;
     }
