@@ -4,7 +4,7 @@ public class Blog {
     private Set<Post> postagens;
 
     public Blog() {
-        this.postagens = new HashSet<>();
+        this.postagens = new LinkedHashSet<>();
     }
 
     public void adicionarPostagem(Post postagem) {
@@ -52,15 +52,15 @@ public class Blog {
     }
 
     public Map<Categorias, Set<Post>> obterTodosPostsPorCategorias() {
-        Map<Categorias, Set<Post>> mapa = new HashMap<>();
+        Map<Categorias, Set<Post>> mapa = new LinkedHashMap<>();
         for (Post p : postagens) {
-            mapa.computeIfAbsent(p.getCategoria(), k -> new TreeSet<>()).add(p);
+            mapa.computeIfAbsent(p.getCategoria(), k -> new LinkedHashSet<>()).add(p);
         }
         return mapa;
     }
 
     public Map<Autor, Set<Post>> obterTodosPostsPorAutor() {
-        Map<Autor, Set<Post>> mapa = new HashMap<>();
+        Map<Autor, Set<Post>> mapa = new TreeMap<>();
         for (Post p : postagens) {
             mapa.computeIfAbsent(p.getAutor(), k -> new TreeSet<>()).add(p);
         }
