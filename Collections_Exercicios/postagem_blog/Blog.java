@@ -23,7 +23,7 @@ public class Blog {
     }
 
     public Map<Categorias, Integer> obterContagemPorCategoria() {
-        Map<Categorias, Integer> contagem = new HashMap<>();
+        Map<Categorias, Integer> contagem = new LinkedHashMap<>();
         for (Post p : postagens) {
             Categorias cat = p.getCategoria();
             contagem.put(cat, contagem.getOrDefault(cat, 0) + 1);
