@@ -17,7 +17,7 @@ class Produto {
     @Override
     public String toString() {
         DecimalFormat df = new DecimalFormat("0.00");
-        return "[" + codigo + "] " + nome + " " + categoria + " R$ " + df.format(preco);
+        return "[" + codigo + "] " + nome + " " + categoria + " R$ " + df.format(preco).replace(".",",");
     }
 
     public CategoriaProduto getCategoria() {
