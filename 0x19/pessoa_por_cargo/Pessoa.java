@@ -19,6 +19,10 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        return String.format("[%d] %s %s %d R$ %.6f", codigo, nome, cargo, idade, salario);
+        return String.format("[%d] %s %s %d R$ %6s", codigo, nome, cargo, idade, tratarSalario(salario));
+    }
+
+    public String tratarSalario(Double salario) {
+        return String.format("%.6f", salario).replace(",", ".");
     }
 }
