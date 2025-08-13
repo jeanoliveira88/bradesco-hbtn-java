@@ -1,0 +1,36 @@
+import java.util.*;
+import java.text.DecimalFormat;
+
+class Produto {
+    private int codigo;
+    private String nome;
+    private CategoriaProduto categoria;
+    private double preco;
+
+    public Produto(int codigo, String nome, CategoriaProduto categoria, double preco) {
+        this.codigo = codigo;
+        this.nome = nome;
+        this.categoria = categoria;
+        this.preco = preco;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
+
+
+    @Override
+    public String toString() {
+        DecimalFormat df = new DecimalFormat("0.00");
+        return "[" + codigo + "] " + nome + " " + categoria + " R$ " + df.format(preco).replace(".",",");
+    }
+
+    public CategoriaProduto getCategoria() {
+        return categoria;
+    }
+}
