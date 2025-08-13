@@ -23,6 +23,6 @@ public class Pessoa {
     }
 
     public String tratarSalario(Double salario) {
-        return String.format("%.6f", salario).replace(",", ".");
+        return String.format("%.6f", salario).replace(".", ",");
     }
 }
